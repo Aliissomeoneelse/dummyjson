@@ -15,7 +15,6 @@ public class UsersService {
 
     private final UserRepository usersRepository;
 
-    // GET ALL / LIMIT / SKIP / SORT
     public UserListResponse getAll(
             Integer limit,
             Integer skip,

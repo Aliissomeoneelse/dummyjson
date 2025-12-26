@@ -15,7 +15,6 @@ public class PostService {
 
     private final PostRepository postRepository;
 
-    // GET ALL / LIMIT / SKIP / SORT
     public PostListResponse getAll(
             Integer limit,
             Integer skip,
