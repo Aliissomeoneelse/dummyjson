@@ -47,6 +47,14 @@ public class JwtUtil {
                 .getSubject();
     }
 
+    public boolean isTokenValid(String token, String username) {
+        return username.equals(extractUsername(token)) && !isTokenExpired(token);
+    }
+
+    private boolean isTokenExpired(String token) {
+        return extractClaims(token).getExpiration().before(new Date());
+    }
+
     public Long extractUserId(String token) {
         return extractClaims(token).get("id", Long.class);
     }

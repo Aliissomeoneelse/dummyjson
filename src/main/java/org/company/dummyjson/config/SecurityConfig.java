@@ -19,13 +19,17 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()) // отключаем CSRF
                 .cors(cors -> {})             // включаем CORS
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/users/add", "/auth/**", "/error").permitAll()
-                        .anyRequest().authenticated()
+                        .requestMatchers(
+                                "/users/**",
+                                "/auth/**",
+                                "posts/add",
+                                "/error"
+                        ).permitAll()
+                        .anyRequest().authenticated() // остальные требуют JWT
                 );
 
         return http.build();
     }
-
 
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
@@ -37,7 +41,6 @@ public class SecurityConfig {
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
-
         return source;
     }
 }

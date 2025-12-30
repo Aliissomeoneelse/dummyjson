@@ -16,6 +16,6 @@ public interface PostRepository extends JpaRepository<Post, Long> {
             """)
     List<Post> search(@Param("q") String q);
 
-    List<Post> findByUserId(Long userId);
+    List<Post> findByUserId(Integer userId);
 
 }

@@ -61,7 +61,7 @@ public class PostService {
         return new PostListResponse(posts, posts.size(), 0, posts.size());
     }
 
-    public PostListResponse getByUser(Long userId) {
+    public PostListResponse getByUser(Integer userId) {
         List<Post> posts = postRepository.findByUserId(userId);
         return new PostListResponse(posts, posts.size(), 0, posts.size());
     }

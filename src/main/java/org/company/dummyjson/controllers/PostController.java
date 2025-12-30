@@ -38,12 +38,12 @@ public class PostController {
 
     // POSTS BY USER
     @GetMapping("/user/{userId}")
-    public PostListResponse byUser(@PathVariable Long userId) {
+    public PostListResponse byUser(@PathVariable Integer userId) {
         return postService.getByUser(userId);
     }
 
     // ADD
-    @PostMapping
+    @PostMapping("/add")
     public Post add(@RequestBody Post post) {
         return postService.add(post);
     }

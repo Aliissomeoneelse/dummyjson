@@ -51,7 +51,7 @@ public class ProductController {
     }
 
     // ADD
-    @PostMapping
+    @PostMapping("/add")
     public Product add(@RequestBody Product product) {
         return productService.add(product);
     }
