@@ -1,0 +1,29 @@
+{
+  "name": "dummyjson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aliissomeoneelse/dummyjson.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Aliissomeoneelse/dummyjson/issues"
+  },
+  "homepage": "https://github.com/Aliissomeoneelse/dummyjson#readme",
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.11.0"
+  },
+  "devDependencies": {
+    "vite": "^7.3.0"
+  }
+}
