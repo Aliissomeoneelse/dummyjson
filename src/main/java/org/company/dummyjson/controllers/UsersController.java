@@ -25,7 +25,7 @@ public class UsersController {
     }
 
     // GET SINGLE
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Users getOne(@PathVariable Long id) {
         return usersService.getById(id);
     }
@@ -38,7 +38,7 @@ public class UsersController {
 
     // ADD
     @PostMapping("/add")
-    public Users add(@RequestBody Users user) {
+    public Users add(@RequestBody Users user)    {
         return usersService.add(user);
     }
 
