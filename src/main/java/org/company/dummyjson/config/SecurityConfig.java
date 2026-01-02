@@ -23,7 +23,10 @@ public class SecurityConfig {
                                 "/users/**",
                                 "/auth/**",
                                 "posts/add",
-                                "/error"
+                                "/error",
+                                "/index.html",
+                                "/assets/**",
+                                "/favicon.ico"
                         ).permitAll()
                         .anyRequest().authenticated() // остальные требуют JWT
                 );
